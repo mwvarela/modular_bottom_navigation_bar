@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'home_controller.dart';
+import 'page1_controller.dart';
 
-class HomePage extends StatefulWidget {
+class Page1Page extends StatefulWidget {
   final String title;
-  const HomePage({Key key, this.title = "Home"}) : super(key: key);
+  const Page1Page({Key key, this.title = "Page1"}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _Page1PageState createState() => _Page1PageState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeController> {
+class _Page1PageState extends ModularState<Page1Page, Page1Controller> {
   //use 'controller' variable to access controller
 
   @override
@@ -19,8 +19,8 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        children: <Widget>[],
+      body: Center(
+        child: Text("Page 1"),
       ),
     );
   }
